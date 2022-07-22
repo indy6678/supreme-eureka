@@ -1,0 +1,22 @@
+{
+  "name": "supreme-eureka",
+  "version": "1.0.0",
+  "description": "README generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indy6678/supreme-eureka.git"
+  },
+  "author": "Edward Sanchez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/indy6678/supreme-eureka/issues"
+  },
+  "homepage": "https://github.com/indy6678/supreme-eureka#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
