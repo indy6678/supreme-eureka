@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
+const Choice = require('inquirer/lib/objects/choice');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -62,7 +63,40 @@ const questions = [
         message: 'Enter a description for your project',
     },
     {
-        type: 
+        type: 'input',
+        name: 'install',
+        message: 'Enter install instructions (Required)',
+        validate: installInput => {
+            if (installInput) {
+                return true;
+            } else {
+                console.log('Please enter install instructions!');
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Enter some usage instructions. (Required)';
+        validate: usageInput => {
+            if (usageInput) {
+                return true;
+            } else {
+                console.log('Tell everyone how to use the app!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'checkbox',
+        name: 'license',
+        message: 'Select a license (all that apply)',
+        choices: ['GNU AGPLv3','GNU GPLv3','GNU LGPLv3','Mozilla Public License 2.0','Apache License 2.0','MIT License','Boost Software License 1.0','The Unlicense']
+    },
+    {
+        type:'input',
+        nae: 'contrib',
+        message: ''
     }
 ];
 
