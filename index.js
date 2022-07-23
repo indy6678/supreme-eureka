@@ -77,7 +77,7 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Enter some usage instructions. (Required)';
+        message: 'Enter some usage instructions. (Required)',
         validate: usageInput => {
             if (usageInput) {
                 return true;
@@ -90,21 +90,25 @@ const questions = [
     {
         type: 'checkbox',
         name: 'license',
-        message: 'Select a license (all that apply)',
+        message: 'Select a license (all that may apply)',
         choices: ['GNU AGPLv3','GNU GPLv3','GNU LGPLv3','Mozilla Public License 2.0','Apache License 2.0','MIT License','Boost Software License 1.0','The Unlicense']
     },
     {
-        type:'input',
-        nae: 'contrib',
-        message: ''
-    }
+        type:'confirm',
+        name: 'contrib',
+        message: 'Would you like to enter a list of contributors',
+        default: false
+    },
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+const init = (questions) => {
+    return inquirer.prompt(questions);  
+}
 
 // Function call to initialize app
 init();
+console.log(questions);
