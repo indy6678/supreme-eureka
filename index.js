@@ -105,10 +105,10 @@ const questions = [
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-const init = (questions) => {
-    return inquirer.prompt(questions);  
-}
+const init = () => {
+    return inquirer.prompt(questions);
+};
+
 
 // Function call to initialize app
-init();
-console.log(questions);
+init()
