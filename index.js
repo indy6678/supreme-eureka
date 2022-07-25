@@ -2,6 +2,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const Choice = require('inquirer/lib/objects/choice');
+const genReadMe = require('./src/page-template');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -21,7 +22,7 @@ const questions = [
     {
         type: 'input',
         name: 'github',
-        message: 'Enter your GitHub username (Required)',
+        message: 'Enter your GitHub username. (Required)',
         validate: githubInput => {
             if (githubInput) {
                 return true;
@@ -47,7 +48,7 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'Enter the title of your project (Required)',
+        message: 'Enter the title of your project. (Required)',
         validate: titleInput => {
             if (titleInput) {
                 return true;
@@ -60,12 +61,12 @@ const questions = [
     {
         type: 'input',
         name: 'description',
-        message: 'Enter a description for your project',
+        message: 'Enter a description for your project.',
     },
     {
         type: 'input',
         name: 'install',
-        message: 'Enter install instructions (Required)',
+        message: 'Enter install instructions. (Required)',
         validate: installInput => {
             if (installInput) {
                 return true;
@@ -96,19 +97,26 @@ const questions = [
     {
         type:'confirm',
         name: 'contrib',
-        message: 'Would you like to enter a list of contributors',
+        message: 'Would you like to enter a list of contributors?',
         default: false
     },
-];
+]
+
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
+fs.writeFile("./README.md", genReadMe(), err =>{
+    if(err) throw err;
+    console.log("ReadMe complete!")
+    });
+
 
 // TODO: Create a function to initialize app
 const init = () => {
-    return inquirer.prompt(questions);
+    inquirer.prompt(questions)
+    .then(answers => console.log(answers.name));
 };
 
 
 // Function call to initialize app
-init()
+init();
