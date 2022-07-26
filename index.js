@@ -2,8 +2,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const Choice = require('inquirer/lib/objects/choice');
-const genReadMe = require('./src/page-template');
-var compList = {}
+const genReadMe = require('./src/rm-template');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -38,7 +37,10 @@ const questions = [
         name: 'email',
         message: 'Enter your email address. (Required)',
         validate: emailInput => {
+            
             if (emailInput) {
+                var emailSplit = emailInput.split(".")
+                console.log(emailSplit)
                 return true;
             } else {
                 console.log('Please enter your email address!');
@@ -98,7 +100,7 @@ const questions = [
     {
         type:'confirm',
         name: 'contrib',
-        message: 'Would you like to enter a list of contributors?',
+        message: 'Would you like to contribute?',
         default: false
     },
 ]
