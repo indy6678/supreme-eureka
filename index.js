@@ -3,6 +3,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const Choice = require('inquirer/lib/objects/choice');
 const genReadMe = require('./src/page-template');
+var compList = {}
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -104,19 +105,26 @@ const questions = [
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-fs.writeFile("./README.md", genReadMe(), err =>{
+// function writeToFile(fileName, data) {}
+const writeFile = () => {
+fs.writeFile("./README.md", genReadMe(compList), err =>{
     if(err) throw err;
+    return
+    })
     console.log("ReadMe complete!")
-    });
+    }
 
 
 // TODO: Create a function to initialize app
 const init = () => {
     inquirer.prompt(questions)
-    .then(answers => console.log(answers.name));
+    .then(answers => {
+        // console.log(answers.name)
+        compList = answers
+        console.log(compList)
+    })
+    .then(writeFile);
 };
-
 
 // Function call to initialize app
 init();
