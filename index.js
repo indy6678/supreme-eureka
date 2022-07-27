@@ -8,7 +8,7 @@ const genReadMe = require('./src/rm-template');
 const questions = [
     {
         type: 'input',
-        name: 'name',
+        name: 'myname',
         message: 'What is your name? (Required)',
         validate: nameInput => {
             if (nameInput) {
@@ -95,7 +95,8 @@ const questions = [
         type: 'checkbox',
         name: 'license',
         message: 'Select a license (all that may apply)',
-        choices: ['GNU AGPLv3','GNU GPLv3','GNU LGPLv3','Mozilla Public License 2.0','Apache License 2.0','MIT License','Boost Software License 1.0','The Unlicense']
+        choices: ['MIT License','GNU AGPLv3','GNU GPLv3','GNU LGPLv3','Mozilla Public License 2.0','Apache License 2.0','Boost Software License 1.0','The Unlicense'],
+        default: ['MIT License']
     },
     {
         type:'confirm',
@@ -121,7 +122,6 @@ fs.writeFile("./README.md", genReadMe(compList), err =>{
 const init = () => {
     inquirer.prompt(questions)
     .then(answers => {
-        // console.log(answers.name)
         compList = answers
         console.log(compList)
     })
