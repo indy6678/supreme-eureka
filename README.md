@@ -21,9 +21,9 @@ Enter 'node index' at prompt and follow the prompts that appear.
 
 ## Licensing
 
-[MIT License]("../license.txt")
+[MIT License](https://github.com/indy6678/supreme-eureka/blob/c6ddeae080abb18b4020816edc5585197f7c9383/License.txt)
 
-## Questions (req)
+## Questions
 
 GitHub Username: indy6678<br>
 GitHub link: https://github.com/indy6678<br>
