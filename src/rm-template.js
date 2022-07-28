@@ -1,4 +1,3 @@
-// const compList = require("compList")
 const genReadMe = (compList) => {
 
 return `
@@ -24,14 +23,6 @@ ${compList.install}
 ## Usage (Req)
 
 ${compList.usage}
-
-## License (Req)
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-${compList.license[0]}<br>
-${compList.license[1]}<br>
-${compList.license[2]}
 
 ## How To Contribute
 

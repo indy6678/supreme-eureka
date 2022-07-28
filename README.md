@@ -1,9 +1,9 @@
 
-# title
+# ;lkndvf
 
 ## Description (Req)
 
-desc
+;landsv
 
 ## Table of Contents (Req)
 
@@ -16,23 +16,15 @@ desc
 
 ## Installation (Req)
 
-install
+;lknsdv
 
 ## Usage (Req)
 
-usage
-
-## License (Req)
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-MIT License<br>
-undefined<br>
-undefined
+l;knvfd
 
 ## How To Contribute
 
-If you would like to contribute, please follow as set forth [here](https://www.contributor-covenant.org/).
+If you would like to contribute, please follow guidelines as set forth [here](https://www.contributor-covenant.org/).
 
 ## Tests
 
@@ -40,7 +32,7 @@ If you would like to contribute, please follow as set forth [here](https://www.c
 
 ## Questions (req)
 
-GitHub Username: indy6678<br>
-GitHub link: https://github.com/indy6678<br>
-- For more information, feel free to reach me at indy6678@gmail.com.
+GitHub Username: ;lknv<br>
+GitHub link: https://github.com/;lknv<br>
+- For more information, feel free to reach me at ;lknsdav.
 

@@ -1,10 +1,12 @@
-// TODO: Include packages needed for this application
+// packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
 const Choice = require('inquirer/lib/objects/choice');
 const genReadMe = require('./src/rm-template');
+const genLicense = require('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
+
+//  an array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -36,11 +38,8 @@ const questions = [
         type: 'input',
         name: 'email',
         message: 'Enter your email address. (Required)',
-        validate: emailInput => {
-            
+        validate: emailInput => {            
             if (emailInput) {
-                var emailSplit = emailInput.split(".")
-                console.log(emailSplit)
                 return true;
             } else {
                 console.log('Please enter your email address!');
@@ -86,7 +85,7 @@ const questions = [
             if (usageInput) {
                 return true;
             } else {
-                console.log('Tell everyone how to use the app!');
+                console.log('Tell us how to use the app!');
                 return false;
             }
         }
@@ -95,17 +94,15 @@ const questions = [
         type: 'checkbox',
         name: 'license',
         message: 'Select a license (all that may apply)',
-        choices: ['MIT License','GNU AGPLv3','GNU GPLv3','GNU LGPLv3','Mozilla Public License 2.0','Apache License 2.0','Boost Software License 1.0','The Unlicense'],
-        default: ['MIT License']
+        choices: ['MIT License','GNU AGPLv3','GNU GPLv3','GNU LGPLv3','Mozilla Public License 2.0','Apache License 2.0','Boost Software License 1.0','The Unlicense']
     },
     {
         type:'confirm',
         name: 'contrib',
-        message: 'Would you like to contribute?',
+        message: 'Would you like to allow contributions?',
         default: false
     },
 ]
-
 
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
@@ -125,7 +122,7 @@ const init = () => {
         compList = answers
         console.log(compList)
     })
-    .then(writeFile);
+    .then(writeFile)
 };
 
 // Function call to initialize app
