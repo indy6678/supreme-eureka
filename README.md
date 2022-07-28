@@ -3,7 +3,7 @@
 
 ## Description (Req)
 
-Generates a README.md file from user input
+Generates a professional README.md from user inputs
 
 ## Table of Contents (Req)
 
@@ -16,11 +16,11 @@ Generates a README.md file from user input
 
 ## Installation (Req)
 
-Clone the repo. Then, initialize using npm init. After, install dependencies using node install
+Clone Repo. Then, run NPM init at the prompt. After that, install Inquirer by running npm i inquirer@8.2.4 at prompt.
 
 ## Usage (Req)
 
-Enter node index at the prompt. Then, answer the prompts.
+Run node index at prompt and follow the prompts that appear.
 
 ## How To Contribute
 
