@@ -13,6 +13,8 @@ Generates a professional README.md from user inputs
 
 ## Installation
 
+![Professional-README-Generator](./assets/images/screenshot.png)
+
 Clone Repo. Then, run 'npm init' at the prompt. After that, install Inquirer by running 'npm i inquirer@8.2.4' at prompt.
 
 ## Usage
