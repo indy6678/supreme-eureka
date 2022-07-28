@@ -19,6 +19,8 @@ Clone Repo. Then, run 'npm init' at the prompt. After that, install Inquirer by 
 
 ## Usage
 
+Check it out in action [here!](https://drive.google.com/file/d/1CHMeFcZZonqfLHD4vjssu22ZsA3MBk9J/view)
+
 Enter 'node index' at prompt and follow the prompts that appear.
 
 ## Licensing
