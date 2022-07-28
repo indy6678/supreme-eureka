@@ -21,7 +21,7 @@ Enter 'node index' at prompt and follow the prompts that appear.
 
 ## Licensing
 
-[MIT License](../license.txt)
+[MIT License]("../license.txt")
 
 ## Questions (req)
 
